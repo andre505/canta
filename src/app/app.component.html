@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home One || Zimed || App Landing Page HTML Template</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/favicons/site.webmanifest">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- plugin scripts -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/zimed-icon.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.bxslider.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/magnific-popup.css">
+    <!-- template styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <header class="main-nav__header-one ">
+            <nav class="header-navigation stricky">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="main-nav__logo-box">
+                        <a href="index.html" class="main-nav__logo">
+                          <img src="../assets/images/cantalogo.svg" width="150" alt="Awesome Image" />
+                        </a>
+                        <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i>
+                            <!-- /.smpl-icon-menu --></a>
+                    </div><!-- /.logo-box -->
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="main-nav__main-navigation">
+                      <ul class="one-page-scroll-menu main-nav__navigation-box">
+                        <li class="scrollToLink">
+                            <a href="#howworks">HOW IT WORKS</a>
+                        </li>
+                        <li class="scrollToLink">
+                            <a href="#colorrocket">OUR EXPERIENCE</a>
+                        </li>
+                        <li class="scrollToLink">
+                            <a href="#trustedul">TRUSTED AND SECURE</a>
+                        </li>
+                        <li class="scrollToLink">
+                            <a href="#whycantasection">WHY CANTA?</a>
+                        </li>
+                        <!-- <li class="scrollToLink">
+                            <a href="#testimonials">Testimonials</a>
+                        </li>
+                        <li class="dropdown scrollToLink">
+                            <a href="#blog">Blog</a>
+                            <ul>
+                                <li><a href="blog.html">Blog Page</a></li>
+                                <li><a href="blog-details.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="scrollToLink">
+                            <a href="#contact">Contact</a>
+                        </li> -->
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                    <div class="main-nav__right">
+                      <img src="../assets/images/downloadapp.svg" alt="" class="header__btn"><!-- /.thm-btn header__btn -->
+                    </div><!-- /.main-nav__right -->
+                </div>
+                <!-- /.container -->
+            </nav>
+        </header><!-- /.main-nav__header-one -->
+
+        <section class="banner-one" id="banner" style="background-image: url(../assets/images/background/bluebackground.svg);">
+
+            <!-- <img src="../assets/images/shapes/banner-shapes-1-1.png" alt="" class="banner-one__shape-1">
+            <img src="../assets/images/shapes/banner-shapes-1-2.png" alt="" class="banner-one__shape-2">
+
+            <img src="../assets/images/shapes/banner-shapes-1-4.png" alt="" class="banner-one__shape-4">
+            <img src="../assets/images/shapes/banner-shapes-1-5.png" alt="" class="banner-one__shape-5">
+            <img src="../assets/images/shapes/banner-shapes-1-6.png" alt="" class="banner-one__shape-6">
+            <img src="../assets/images/shapes/banner-shapes-1-7.png" alt="" class="banner-one__shape-7"> -->
+
+            <div class="container">
+                <!-- <img src="../assets/images/shapes/banner-shapes-1-3.png" alt="" class="banner-one__shape-moc-1">-->
+                <img src="../assets/images/canta_phones.png" alt="" class="banner-one__moc">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="banner-one__content">
+
+                            <h3>Send & Receive Money <br>
+                              Abroad, Anytime, Anyday.</h3>
+
+                              <input type="text"  [(ngModel)]="request.email" class="antinput" name="email" placeholder="Enter Your Email"> <input type="button" value="Check"  class="antbutton" (click)="check()"><span><img *ngIf="isfetching" src="../assets/images/loading.svg" alt="" class="loadinggif"></span>
+
+                              <div class="w-form-done" *ngIf="isQuerySuccess" style="margin: auto; width: 70%; display: flex; flex-direction: column;">
+                                <p *ngIf="ismodelerror" style="color:red">{{message}}</p>.
+                                <h5 *ngIf="isRegisterSuccess" style="color: #fff; font-size: 18; margin-top: 2%;">Congrats {{request.email}} You have successfully registered.</h5>
+                                <p *ngIf="isRegisterSuccess">You are customer number {{count}}.</p>.
+                              </div>
+
+                              <!-- <ng-template #mymodal let-modal class="modal">
+                                    <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+                                            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                              <span aria-hidden="true">×</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                            This is example from ItSolutionStuff.com
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+                                          </div>
+                                  </div>
+                              </ng-template> -->
+
+
+                            <!-- <p>We are committed to providing our customers with exceptional service <br> while offering our employees the best training.</p> -->
+                            <!-- <a href="#contact" data-target="#contact" class="thm-btn banner-one__btn scroll-to-target">Get Started</a> -->
+                            <!-- /.thm-btn banner-one__btn -->
+                        </div><!-- /.banner-one__content -->
+                    </div><!-- /.col-lg-7 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.banner-one -->
+
+        <section class="service-one" id="features">
+            <div class="container">
+                <!-- <div class="block-title text-center">
+                    <span class="block-title__bubbles"></span>
+                    <p>Checkout App Features</p>
+                    <h3>The Only App You’ll Need</h3>
+                </div> -->
+                <div class="row" style="white-space: nowrap; overflow: hidden;">
+
+                  <!-- <div class="column">
+                    <img class="circular--square" src="../assets/images/9.png" />
+                  </div>
+                  <div class="column">
+                    <img class="circular--square" src="../assets/images/9.png" />
+                  </div>
+                  <div class="column">
+                    <img class="circular--square" src="../assets/images/9.png" />
+                  </div>
+                  <div class="column">
+                    <img class="circular--square" src="../assets/images/9.png" />
+                  </div>
+                  <div class="column">
+                    <img class="circular--square" src="../assets/images/9.png" />
+                  </div>
+                  <div class="column">
+                    <img class="circular--square" src="../assets/images/9.png" />
+                  </div>
+                  <div class="column">
+                    <img class="circular--square" src="../assets/images/9.png" />
+                  </div>
+                  <div class="column">
+                    <img class="circular--square" src="../assets/images/9.png" />
+                  </div>
+                  <div class="column">
+                    <img class="circular--square" src="../assets/images/13.png" />
+                  </div> -->
+
+
+                    <h1 class="marqueep" style="margin-top: 4%; display: flex; flex-wrap: nowrap;">
+                      <span class="flag-icon flag-icon-ca" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-cn" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-cz" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-ng" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-ae" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-us" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-bg" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-bh" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-li" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-gb" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-ch" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-dk" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-au" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-nz" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-om" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-ph" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-pl" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-qa" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-ro" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-ug" style="margin-right: 3%;"></span>
+                    </h1>
+                    <h2 class="marqueep1 marqueep2" style=" margin-left: 5%; margin-top: -6.25%; display: flex; flex-wrap: nowrap;">
+                      <span class="flag-icon flag-icon-fo" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-gl" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-hr" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-hu" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-id" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-il" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-in" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-jp" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-ke" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-kw" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-mx" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-my" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-no" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-ru" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-sa" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-se" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-sg" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-th" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-tr" style="margin-right: 3%;"></span>
+                      <span class="flag-icon flag-icon-za" style="margin-right: 3%;"></span>
+                    </h2>
+               </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.service-one -->
+
+        <div class="buildings">
+        </div>
+
+        <div class="boymanifest">
+          <img src="../assets/images/boymanifest.svg" alt="" style="width:12%; height:12%;">
+        </div>
+
+        <div class="cta-three">
+
+            <div class="container">
+
+
+                <div class="row justify-content-end">
+                  <img src="../assets/images/Canta_Screen.png" alt="" class="cta-three__moc">
+                    <div class="col-lg-6">
+                        <div class="cta-three__content">
+                            <div class="cta-three__box-content">
+                                <span class="block-title__bubbles"></span>
+                                <h3 id="howworks" style="margin-bottom: 1%;">HOW IT WORKS</h3>
+
+                                <p style="margin-bottom: 2%;">With Canta it is a seamless process to download and start sending
+                                  and receiving money across different countries in minutes. There is no
+                                  need for anyone to be stranded anymore with our instant remittance
+                                  process.</p>
+
+                            </div><!-- /.block-title -->
+                            <div class="cta-three__box-wrap">
+                                <div class="cta-three__box">
+                                    <div class="cta-three__box-icon">
+                                        <i class="zimed-icon-strategy"></i>
+                                    </div><!-- /.cta-three__box-icon -->
+                                    <div class="cta-three__box-content">
+                                        <h3>Register In Minutes</h3>
+                                        <p>Download the "Canta" app on the Google Play Store or Apple
+                                          App Store, complete the KYC process and start sending and receiving.</p>
+                                    </div><!-- /.cta-three__box-content -->
+                                </div><!-- /.cta-three__box -->
+                                <div class="cta-three__box">
+                                    <div class="cta-three__box-icon">
+                                        <i class="zimed-icon-training"></i>
+                                    </div><!-- /.cta-three__box-icon -->
+                                    <div class="cta-three__box-content">
+                                        <h3>Make Payment</h3>
+                                        <ul>
+                                        <li>Choose the country you want to send to.</li>
+                                         <li>Input amount you want to send and currency.</li>
+                                         <li>(View amount beneficiary gets rate and charges.)</li>
+                                         <li>Input beneficiary details.</li>
+                                        <li>Send</li>
+                                        </ul>
+
+                                    </div><!-- /.cta-three__box-content -->
+
+                                </div><!-- /.cta-three__box -->
+                            </div><!-- /.cta-three__box-wrap -->
+                            <!-- <a href="#" class="thm-btn cta-three__btn">Discover More</a> -->
+
+                            <!-- /.thm-btn cta-three__btn -->
+                        </div><!-- /.cta-three__content -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.cta-three -->
+
+        <div class="cta-three">
+
+          <div class="container">
+
+
+              <div class="row justify-content-end">
+                <div class="col-md-6" style="float: left;">
+                  <div class="cta-three__content1" style="float: left;">
+
+                      <div class="cta-three__box-wrap" style="float: left;">
+
+                          <div class="cta-three__box1" style="float: left;">
+
+                              <div class="cta-three__box-content1" style="float: left; margin-top: -10%; margin-left: -8%;">
+
+                                  <ul>
+                                      <li>HOW IT WORKS</li>
+                                      <li>We Use Real Exchange Rates.</li>
+                                      <li>We’re obligated to give our customers transparency to Fx rates, and
+                                        there are No hidden fees at all.</li>
+                                  </ul>
+
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                <img src="../assets/images/stocks4.png" alt="" class="stockimage" style="margin-top: -10%; margin-right: 5%;">
+              </div>
+          </div>
+      </div>
+
+      <div class="cta-three">
+
+        <div class="container">
+
+
+            <div class="row justify-content-end">
+
+              <img id="colorrocket" src="../assets/images/colrocket.png" alt="" class="stockimagerocket" style="margin-top: -10%; margin-right: 10%;">
+
+              <div class="col-md-6" style="float: left;">
+                <div class="cta-three__content1">
+
+                    <div class="cta-three__box-wrap">
+
+                        <div class="cta-three__box1">
+
+                            <div class="cta-three__box-content1" >
+
+                                <ul>
+                                    <li>EXPERIENCE</li>
+                                    <li style="background: none; list-style-type: none;">Send Funds Any Time.</li>
+                                    <li style="background: none; list-style-type: none;">Send Money, Anytime, Anyday.</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cta-three">
+
+      <div class="container">
+
+
+          <div class="row justify-content-end">
+            <div class="col-md-6" style="float: left;">
+              <div class="cta-three__content1" style="float: left;">
+
+                  <div class="cta-three__box-wrap" style="float: left;">
+
+                      <div class="cta-three__box1" style="float: left;">
+
+                          <div class="cta-three__box-content2" style="float: left; margin-top: -10%; margin-left: -8%;">
+                              <ul>
+                                  <li>EXPERIENCE</li>
+                                  <li>Track Your Money.</li>
+                                  <li>Keep real time track of your money. Learn how to navigate
+                                    the markets with business news, watchlists and perfomance
+                                    summaries.</li>
+                              </ul>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+            <img src="../assets/images/canta_phone_location.png" alt="" class="stockimageloc" style="margin-top: -20%; margin-right: 5%;">
+          </div>
+      </div>
+  </div>
+
+
+
+  <div class="cta-three">
+
+    <div class="container">
+
+
+        <div class="row justify-content-end">
+
+          <img src="../assets/images/call242.svg" alt="" class="stockimage24" style="margin-top: -10%; margin-right: 18%;">
+
+          <div class="col-md-6" style="float: left;">
+            <div class="cta-three__content1">
+
+                <div class="cta-three__box-wrap">
+
+                    <div class="cta-three__box24" style="margin-top: -15%;">
+
+                        <div class="cta-three__box-content24">
+                            <ul>
+                                <li>EXPERIENCE</li>
+                                <li class="callman">24hrs Live Support</li>
+                                <li style="background: none; list-style-type: none;">
+                                Our support never sleeps! It is our promise not to make the customer
+                                feel stranded during any hour of need. We don’t deem the relationship
+                                with the customer to be over with project delivery. Instead, each
+                                check-in continues to a long-lasting and fruitful relationship.
+                              </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="cta-three">
+
+  <div class="container">
+
+
+      <div class="row justify-content-end">
+
+        <img src="../assets/images/pcidsspadlock.svg" alt="" class="stockimagepci" style="margin-top: -55; margin-right: 5%;">
+
+        <div class="col-md-6" style="float: left;">
+          <div class="cta-three__content1">
+
+              <div class="cta-three__box-wrap">
+
+                  <div class="cta-three__box1">
+
+                      <div class="cta-three__box-content1" style="margin-top: 8%;">
+
+                          <ul id="trustedul">
+                              <li>EXPERIENCE</li>
+                              <li style="background: none; list-style-type: none;">Trusted and Secure</li>
+                              <li style="background: none; list-style-type: none;">Safe and secure API suite for End to end encryption.
+                                PCI DSS certified. FCA regulated.</li>
+                          </ul>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+  </div>
+</div>
+
+<div class="currbg">
+    <div class="container">
+        <div class="row">
+              <div id="whycantasection" class="col">
+                    <h4 class="whycanta">Why Canta?</h4>
+              </div>
+        </div>
+
+        <div class="row" style="margin-top: 1.5%;">
+          <div class="col-4 whycolumns">
+              <img src="../assets/images/circdol.png" class="circdol">
+              <span>Better Rates</span>
+          </div>
+          <div class="col-4 whycolumns">
+            <img src="../assets/images/arrowdol.png" class="arrowdol">
+            <span>Cheaper Transaction Fees</span>
+          </div>
+          <div class="col-4 whycolumns">
+            <img src="../assets/images/touch.png" class="touch">
+            <span>Easier and More Convenient Service</span>
+          </div>
+       </div>
+
+       <div class="row" style="margin-top: 1.5%;">
+        <div class="col-4 whycolumns">
+            <img src="../assets/images/chart.png" class="chart">
+            <span>We do large volumes
+              & cater for B2B2c </span>
+        </div>
+        <div class="col-4 whycolumns">
+          <img src="../assets/images/rocket.svg" class="rocketwhy">
+          <span>Faster Remittance</span>
+        </div>
+        <div class="col-4 whycolumns">
+          <img src="../assets/images/handdol.png" class="handdol">
+          <span>Provide loans to
+            kyc’ed customers.</span>
+        </div>
+     </div>
+  </div>
+</div>
+
+<div class="gettheapp">
+  <div class="container"  style="margin-left: -3%;">
+      <div class="row">
+            <div class="col whycolumns">
+                  <h4 class="whycanta" style="color: #fff;">Get The App</h4>
+                  <span style="color: #fff; font-size: 15px;">Take a bold step in 2020. Join our community</span>
+            </div>
+      </div>
+
+      <div class="row" style="margin-top: 1.5%;">
+        <div class="col getappcenter">
+          <input type="text"  [(ngModel)]="request.email" class="antinput1" name="email" placeholder="Enter Your Email"><input type="button" value="Check"  class="antbutton1" (click)="check2()">
+          <img *ngIf="isfetching" src="../assets/images/loading.svg" alt="" class="loadinggif">
+
+
+
+          <!-- <input type="text"  [(ngModel)]="request.email" class="antinput" name="email" placeholder="Enter Your Email"> <input type="button" value="Check"  class="antbutton" (click)="check()"><span><img *ngIf="isfetching" src="../assets/images/loading.svg" alt="" class="loadinggif"></span> -->
+
+        </div>
+
+
+
+     </div>
+
+     <div class="row" style="margin-top: 1.5%;">
+        <div class="col" style="margin-left:30%;">
+              <div class="w-form-done" *ngIf="isQuerySuccess2" style="width: 70%; display: flex; flex-direction: column;">
+                <p *ngIf="ismodelerror" style="color:red">{{message}}</p>
+                <h5 *ngIf="isRegisterSuccess" style="color: #fff; font-size: 18; margin-top: 2%;">Congrats {{request.email}} You have successfully registered.</h5>
+                <p *ngIf="isRegisterSuccess" style="color: #fff;">You are customer number {{count}}.</p>
+              </div>
+          </div>
+     </div>
+</div>
+</div>
+<!--  -->
+
+<div class="lastbottom">
+        <div class="container">
+            <div class="row">
+                  <div class="col">
+                        <h4 class="socialtext">Socials</h4>
+                  </div>
+                  <div class="col">
+                    <h4 class="socialtext1">Get In Touch</h4>
+              </div>
+            </div>
+
+            <div class="row">
+
+                  <img src="../assets/images/instagram.svg" class="socialimage1">
+                  <img src="../assets/images/linkedin.svg" class="socialimage">
+                  <img src="../assets/images/twitter.svg" class="socialimage">
+
+                  <h4 style="float:right; margin-left: 47%;" class="lagosnigeria">Lagos, Nigeria.</h4>
+
+            </div>
+
+            <div class="row">
+
+
+
+         </div>
+      </div>
+</div>
+
+
+<div class="lastlastbottom">
+  <div class="container">
+            <div class="row">
+  <h5 class="copyright">Copyright 2020 - Canta | All Rights Reserved</h5>
+  </div>
+
+</div>
+</div>
+
+
+    </div><!-- /.page-wrapper -->
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+
+    <div class="side-menu__block">
+
+
+        <div class="side-menu__block-overlay custom-cursor__overlay">
+            <div class="cursor"></div>
+            <div class="cursor-follower"></div>
+        </div><!-- /.side-menu__block-overlay -->
+        <div class="side-menu__block-inner ">
+            <div class="side-menu__top justify-content-end">
+
+                <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="../assets/images/shapes/close-1-1.png" alt=""></a>
+            </div><!-- /.side-menu__top -->
+
+
+            <nav class="mobile-nav__container">
+                <!-- content is loading via js -->
+            </nav>
+            <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
+            <div class="side-menu__content">
+                <p>Lorem Ipsum is simply dummy text the printing and setting industry. Lorm Ipsum has been the industry's stanard dummy text ever. </p>
+                <p><a href="mailto:needhelp@zimed.com">needhelp@zimed.com</a> <br> <a href="tel:888-999-0000">888 999 0000</a></p>
+                <div class="side-menu__social">
+                    <a class="fab fa-facebook-f" href="#"></a>
+                    <a class="fab fa-twitter" href="#"></a>
+                    <a class="fab fa-instagram" href="#"></a>
+                    <a class="fab fa-pinterest-p" href="#"></a>
+                </div>
+            </div><!-- /.side-menu__content -->
+        </div><!-- /.side-menu__block-inner -->
+    </div><!-- /.side-menu__block -->
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/TweenMax.min.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/bootstrap-datepicker.min.js"></script>
+    <script src="../assets/js/jquery.easing.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.validate.min.js"></script>
+    <script src="../assets/js/waypoints.min.js"></script>
+    <script src="../assets/js/wow.js"></script>
+    <script src="../assets/js/jquery.counterup.min.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/jquery.bxslider.min.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/jquery.ajaxchimp.min.js"></script>
+    <!-- template scripts -->
+    <script src="../assets/js/theme.js">    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js">
+
+    </script>
+
+</body>
+
+</html>
